@@ -5,7 +5,7 @@ class CurrencyConversion {
   /**
    * XML source URL
    *
-   * @var string
+   * @var string $url
    */
   protected $url = 'https://wikitech.wikimedia.org/wiki/Fundraising/tech/Currency_conversion_sample?ctype=text/xml&action=raw';
 
