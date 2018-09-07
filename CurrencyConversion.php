@@ -110,7 +110,7 @@ class CurrencyConversion {
     $statement->execute(['from_currency'=>$from_currency]);
     $result = $statement->fetch();
 
-    $usd =$result['rate'] * $amount;
+    $usd = round($result['rate'] * $amount,2);
     $usd = 'USD '.$usd;
     
     return $usd;
@@ -165,11 +165,9 @@ class CurrencyConversion {
    *
    */  
   public function convertMultipleTest() {
-    $array = array( 'JPY 5000', 'CZK62.5' );
+    $array = array('JPY 5000','CZK 62.5');
     $result = $this->convertMultiple($array);
     
     print_r($result);
   }
-
-
 }
